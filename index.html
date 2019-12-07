@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Registration</title>
+	<meta charset="utf-8">
+  	<meta name="viewport" content="width=device-width, initial-scale=1">
+  	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+ 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+ 	<script type="text/javascript">
+ 		function changestate(id){
+ 			switch(id)
+ 			{
+ 				case 'login':
+ 					document.getElementById('login').style.backgroundColor = "#4278d3";
+ 					document.getElementById('login').style.color = "#ffffff";
+ 					document.getElementById('registration').style.backgroundColor = "#ffffff";
+ 					document.getElementById('registration').style.color = "#000000";
+ 					document.getElementById('login_div').style.display = "block";
+ 					document.getElementById('registration_div').style.display = "none";
+ 					break;
+ 				case 'registration':
+ 					document.getElementById('registration').style.backgroundColor = "#4278d3";
+ 					document.getElementById('registration').style.color = "#ffffff";
+ 					document.getElementById('login').style.backgroundColor = "#ffffff";
+ 					document.getElementById('login').style.color = "#000000";
+ 					document.getElementById('registration_div').style.display = "block";
+ 					document.getElementById('login_div').style.display = "none";
+ 					break;
+ 			}
+ 		}
+ 	</script>
+</head>
+<body style="background-image: linear-gradient(to right,#092554,#346cc8);">
+	<div class="container-fluid" style="margin-top: 80px;margin-left: 10%;box-shadow: 10px;margin-right: 10%;margin-bottom: 80px;">
+		<div class="row" >
+			<div class="col-sm-7" style="background-image: linear-gradient(to right,#092554,#346cc8);height: 570px; box-shadow: 0 6px 12px 0 rgba(0, 0, 0, 0.5), 0 6px 20px 0 rgba(0, 0, 0, 0.19);margin-top: 0px;">
+				<h6 style="margin-left: 125px;color: #5792be;font-size: 33px;margin-top: 180px;">Welcome to</h6>
+				<h3 style="margin-left: 125px;margin-top: 30px;color:#e1e6eb; font-size: 38px;font-family: verdana;">Web Assignment</h3>
+				<p style="margin-left: 125px; font-size: 13px;margin-top: 30px;color:#b9cdde;">Submitted By - Raj Kothari</p>
+				<br>		
+			</div>
+			<div class="col-sm-1" style="height: 20px;"></div>
+	    	<div class="col-sm-4" style="background-color: #ffffff;height: 570px;box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.5), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
+	    		<div class="row">
+	    			<div class="col-sm-6" id="login" onclick="changestate('login')" style="cursor: pointer;height: 37px;background-color: #4278d3;color: #ffffff;text-align: center;font-size: 17px;padding-top: 6px;">
+	    			LOGIN
+	    			</div>
+	    			<div class="col-sm-6" id="registration" onclick="changestate('registration')" style="cursor: pointer;height: 37px;background-color: #ffffff;color: #000000;text-align: center;font-size: 17px;padding-top: 6px;">
+	    			REGISTRATION
+	    			</div>
+	    		</div>
+	    		<br><br>
+	    		<!-- //start login -->
+	    		<div class="row" id="login_div" style="margin-left: 20px;margin-right: 20px;display: block;">
+  					<form action="Login" method="post">
+  						<br>
+	    				<div class="form-group">
+	    					<br>
+	      					<label for="email">Email:</label>
+	      					<br>
+	      					<input type="email" class="form-control" id="email" placeholder="Enter email" name="email">
+	    				</div>
+	    				<div class="form-group">
+	    					<br>
+	      					<label for="pass">Password:</label>
+	      					<br>
+	      					<input type="password" class="form-control" id="pass" placeholder="Enter password" name="pass">
+	    				</div>
+	    				<br>
+	    				<button type="submit" class="btn btn-default">Submit</button>
+  					</form>
+				</div>
+				<!-- over -->
+				<div class="row" id="registration_div" style="margin-left: 20px;margin-right: 20px;display: none;">
+  					<form action="Registration"  method="POST">
+  						<br>
+  						<div class="form-group">
+	    					<br>
+	      					<label for="name">Name:</label>
+	      					<br>
+	      					<input type="name" class="form-control" id="name" placeholder="Enter Name" name="name">
+	    				</div>
+	    				<div class="form-group">
+	    					<br>
+	      					<label for="email">Email:</label>
+	      					<br>
+	      					<input type="email" class="form-control" id="email" placeholder="Enter email" name="email">
+	    				</div>
+	    				<div class="form-group">
+	    					<br>
+	      					<label for="pass">Password:</label>
+	      					<br>
+	      					<input type="password" class="form-control" id="pass" placeholder="Enter password" name="pass">
+	      					<br>
+	    				</div>
+	    				<button type="submit" class="btn btn-default">Submit</button>
+  					</form>
+				</div>
+	    	</div>
+		</div>
+	</div>
+</body>
+</html>
